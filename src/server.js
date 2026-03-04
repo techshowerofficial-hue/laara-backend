@@ -22,6 +22,7 @@ app.use(express.json());
 
 // 🔥 Serve audio folder
 app.use("/intents", express.static(path.join(__dirname, "intents")));
+app.use("/images", express.static(path.join(__dirname, "images")));
 app.use("/laara", laaraRoutes);
 
 app.get("/", (req, res) => {
