@@ -17,7 +17,7 @@ export const generateSpeech = (text) => {
 
     fs.writeFileSync(textFile, text);
 
-exec(`edge-tts --file ${textFile} --voice en-IN-NeerjaNeural --write-media audio/${audioFile}`, (err) => {
+exec(`python3 -m edge_tts --file ${textFile} --voice en-IN-NeerjaNeural --write-media audio/${audioFile}`, (err) => {
 
       if (err) {
         reject(err);
